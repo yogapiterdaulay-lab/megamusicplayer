@@ -1,4 +1,240 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mega Music — SZ Studio</title><style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fff;color:#191919;font-family:Arial,Helvetica,sans-serif;text-align:center}main{padding:40px 20px}img{display:block;width:min(50vw,215px);height:auto;margin:auto;border-radius:18px}h1{font-size:clamp(32px,6vw,65px);font-weight:500;margin:28px 0 8px}p{color:#777}a{color:#555;text-underline-offset:4px}a:hover{color:#000}
-</style></head><body><main><img src="../../assets/mega-music.png" alt="Mega Music logo"><h1>Mega Music</h1><p>Dedicated page coming soon.</p><a href="../">← Back to SZ Studio</a></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="XtPiXS1wClQO_kmLYX2uS9m6P6Fo5URQxbjIKxk7fKQ" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Music Player — SZ Studio Creative</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --accent: #111111;
+            --accent-hover: #333333;
+            --card-bg: #f8f9fa;
+            --border-color: #e5e5e5;
+        }
+
+        /* Remove scrollbar and prevent outer page scrolling */
+        html, body {
+            overflow: hidden;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Updated Header Color to Black */
+        header, .header {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            padding: 15px 20px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        header a, .header a {
+            color: #ffffff !important;
+        }
+
+        .scrollable-content {
+            flex-grow: 1;
+            overflow-y: auto; /* Internal scrolling if content overflows */
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--card-bg);
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        footer a {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scrollable-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1>Mega Music Player</h1>
+                <div class="tagline">"Mega" (Cloud in Javanese) — Pure, local & cloud audio experience.</div>
+                
+                <!-- Direct Action Buttons -->
+                <div class="action-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.szstudio.megamusicplayer" target="_blank" class="btn">
+                        Get App on Google Play (Testing)
+                    </a>
+                    <a href="https://sites.google.com/view/szstudio-megamusicplayer/privacy-policy" target="_blank" class="btn btn-outline">
+                        View Privacy Policy
+                    </a>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <section>
+                <h2>About Mega Music Player</h2>
+                <p>Meet Mega Music Player—a minimalist, beautifully crafted local and cloud music player designed for Android users who want a fast, distraction-free listening experience.</p>
+                <p>Built with performance and aesthetics in mind by <strong>SZ Studio Creative</strong>, Mega Music Player launches instantly, plays your music library without skipping a beat, and stays completely out of your way so you can just enjoy your sound.</p>
+            </section>
+
+            <!-- Key Features Section -->
+            <section>
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Lightning Fast & Lightweight</h3>
+                        <p>Designed to snap open instantly and consume minimal battery and system resources.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Visually Clean & Simple</h3>
+                        <p>A gorgeous, uncluttered interface that puts your music and album art front and center.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Pure Local & Cloud Playback</h3>
+                        <p>Stream or play audio files stored directly on your device or linked securely via your personal Google Drive.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Zero Clutter & Privacy First</h3>
+                        <p>No intrusive ads, no forced accounts, and no tracking—just you and your music.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2026 SZ Studio Creative / SZ Lab. All Rights Reserved.</p>
+                <p style="margin-top: 8px;">
+                    <a href="https://sites.google.com/view/szstudio-megamusicplayer/home/privacy-policy" target="_blank">Privacy Policy</a> | 
+                    <a href="https://sites.google.com/view/szstudio-megamusicplayer/home" target="_blank">Google Sites Home</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
